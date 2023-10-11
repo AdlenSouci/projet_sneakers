@@ -38,6 +38,7 @@ return new class extends Migration
             $table->index('sexe');
 
             $table->foreign('pays')->references('alpha3')->on('pays');
+            //$table->foreign('id_clients')->references('id')->on('clients');
         });
     }
 

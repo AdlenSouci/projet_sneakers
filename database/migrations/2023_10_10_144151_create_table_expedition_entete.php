@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tva', function (Blueprint $table) {
+        Schema::create('expedition_entete', function (Blueprint $table) {
             $table->id();
-            $table->integer('taux_tva')->nullable(false);
-           
             $table->timestamps();
-
-            $table->index('taux_tva');
         });
     }
 
@@ -26,7 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tva');
+        Schema::dropIfExists('expedition_entete');
     }
 };
-    
