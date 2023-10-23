@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('clients', function (Blueprint $table) {
+           
             $table->id();
+
+           // $table->unsignedBigInteger('id_clients')->nullable(false);
             $table->string('nom', 70)->nullable(false);
             $table->string('prenom', 70)->nullable(true);
             $table->date('date_de_naissance')->nullable(true);
@@ -27,7 +30,8 @@ return new class extends Migration
             $table->enum('sexe', ['Femme', 'Homme', 'Autre'])->nullable(true);
             $table->string('telephone', 20)->nullable(true);
             $table->string('email', 100)->nullable(false)->unique();
-            $table->string('mot_de_passe', 190)->nullable(false);          
+            $table->string('mot_de_passe', 190)->nullable(false);
+
             $table->timestamps();
 
             $table->index('nom');
@@ -38,7 +42,7 @@ return new class extends Migration
             $table->index('sexe');
 
             $table->foreign('pays')->references('alpha3')->on('pays');
-            //$table->foreign('id_clients')->references('id')->on('clients');
+            
         });
     }
 

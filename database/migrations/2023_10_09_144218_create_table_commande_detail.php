@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('commande_detail', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('quantite_commmande',10)->nullable(false);
-            $table->decimal('prix_unitaire_brut',5)->nullable(false);
-            $table->decimal('prix_unitaire_net',5)->nullable(false);
+            $table->primary('id_quantite_commmande',10)->nullable(false);
+            $table->decimal('prix_unitaire_brut',4)->nullable(false);
+            $table->decimal('prix_unitaire_net',4)->nullable(false);
             $table->unsignedBigInteger('montant_ht',10)->nullable(false);
             $table->unsignedBigInteger('remise',10)->nullable(false);
             $table->timestamps();
@@ -28,7 +28,7 @@ return new class extends Migration
             $table->index('remise');
 
 
-            $table->foreign('id_clients')->references('id')->on('clients');
+            //$table->foreign('id_clients')->references('id')->on('clients');
             $table->foreign('id_article')->references('id')->on('article');
             $table->foreign('id_num_commande')->references('id')->on('table_commande_entete');
         });

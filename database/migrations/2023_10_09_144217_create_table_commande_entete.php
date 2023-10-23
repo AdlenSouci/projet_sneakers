@@ -14,15 +14,17 @@ return new class extends Migration
         Schema::create('commande_entete', function (Blueprint $table) {
             $table->id();
             $table->dateTime('date')->nullable(false);
-            $table->integer('id_num_commande')->primary();
-       
+            $table->unsignedBigInteger('id_num_commande')->nullable(false);
+            $table->unsignedBigInteger('id_clients')->nullable(false);
             $table->timestamps();
 
             $table->index('date');
             $table->index('id_num_commande');
-            //problème ici pour id_clients
+
             $table->foreign('id_clients')->references('id')->on('clients');
-            //$table->foreignId('id_clients')->constrained('clients');
+            $table->foreign('id_num_commande')->references('id')->on('commande_entete');
+            
+            
 
         });
     }
