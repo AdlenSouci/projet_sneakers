@@ -19,7 +19,7 @@ return new class extends Migration
 
             $table->index('nom');
             $table->index('id_parent');
-
+            $table->index('id_parent','nom')->unique();
             $table->foreign('id_parent')->references('id')->on('famille');
 
         });

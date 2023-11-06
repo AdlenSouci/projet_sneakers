@@ -18,7 +18,7 @@ return new class extends Migration
            
             $table->timestamps();
 
-            $table->index('nom');
+            $table->index('nom')->unique();
             
         });
     }
