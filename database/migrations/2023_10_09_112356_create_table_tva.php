@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tva', function (Blueprint $table) {
             $table->id();
-            $table->integer('taux_tva')->nullable(false);
+            $table->decimal('taux_tva', 5,2)->nullable(false);
            
             $table->timestamps();
 
