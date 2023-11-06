@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('commande_entete', function (Blueprint $table) {
             $table->id();
             $table->dateTime('date')->nullable(false);
-            $table->unsignedBigInteger('id_num_commande')->nullable(false);
             $table->unsignedBigInteger('id_clients')->nullable(false);
             $table->timestamps();
 
