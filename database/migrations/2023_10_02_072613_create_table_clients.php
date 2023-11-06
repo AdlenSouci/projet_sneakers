@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('adresse2', 100)->nullable(true);
             $table->string('cp2', 15)->nullable(true);
             $table->string('ville2', 70)->nullable(true);
-            
             $table->string('pays2', 3)->nullable(true)->default('FRA');
             $table->enum('sexe', ['Femme', 'Homme', 'Autre'])->nullable(true);
             $table->string('telephone', 20)->nullable(true);
