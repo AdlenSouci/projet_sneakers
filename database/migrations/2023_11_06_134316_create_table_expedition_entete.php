@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('expedition_detail', function (Blueprint $table) {
-
+        Schema::create('expedition_entete', function (Blueprint $table) {
             $table->id();
-            $table->integer('num_commande');
-            
-
-
             $table->timestamps();
         });
     }
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('expedition_detail');
+        Schema::dropIfExists('expedition_entete');
     }
 };

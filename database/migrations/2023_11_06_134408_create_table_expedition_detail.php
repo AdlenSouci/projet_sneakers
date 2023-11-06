@@ -12,12 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('expedition_detail', function (Blueprint $table) {
-
             $table->id();
-            $table->integer('num_commande');
-            
-
-
             $table->timestamps();
         });
     }
