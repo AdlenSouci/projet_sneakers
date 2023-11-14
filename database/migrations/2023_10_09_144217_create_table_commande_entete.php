@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->dateTime('date')->nullable(false);
             $table->unsignedBigInteger('id_clients')->nullable(false);
+            $table->unsignedBigInteger('id_num_commande')->nullable(false);
+            
             $table->timestamps();
 
             $table->index('date');

@@ -13,7 +13,29 @@ return new class extends Migration
     {
         Schema::create('expedition_detail', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('id_num_commande')->nullable(false);
+            
+            $table->unsignedBigInteger('id_num_bon_livraison')->nullable(false);
+            $table->unsignedBigInteger('id_num_ligne_bon_livraison')->nullable(false);
+            $table->unsignedBigInteger('id_article')->nullable(false);
+            
+            $table->integer('quantite_livraison')->nullable(false);
+            $table->decimal('prix_unitaire_brut',9,2)->nullable(false);
+            $table->decimal('prix_unitaire_net',9,2)->nullable(false);
+            $table->decimal('montant_ht',9,2)->nullable(false);
+            $table->decimal('remise',9,2)->nullable(false);
             $table->timestamps();
+
+
+            
+            $table->index('id_num_commande');
+            $table->index('montant_ht');
+            $table->index('remise');
+
+
+            $table->foreign('id_article')->references('id')->on('article');
+            $table->foreign('id_num_commande')->references('id')->on('commande_entete');
         });
     }
 
@@ -23,5 +45,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('expedition_detail');
+
     }
 };

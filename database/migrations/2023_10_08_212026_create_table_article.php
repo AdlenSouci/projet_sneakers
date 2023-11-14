@@ -17,7 +17,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_marque')->nullable(false);
             $table->string('modele', 70)->nullable(false);
             $table->text('description')->nullable(true);
-
             $table->string('couleur', 60)->nullable(false);
             $table->decimal('prix_public', 9, 2)->nullable(false);
             $table->decimal('prix_achat', 9, 2)->nullable(false);           
