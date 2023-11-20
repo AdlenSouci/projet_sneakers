@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tva', function (Blueprint $table) {
+        Schema::create('tvas', function (Blueprint $table) {
             $table->id();
             $table->decimal('taux_tva',5,2)->nullable(false);
            
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tva');
+        Schema::dropIfExists('tvas');
     }
 };
     

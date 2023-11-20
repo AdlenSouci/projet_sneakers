@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('commande_entete', function (Blueprint $table) {
+        Schema::create('commandes_entetes', function (Blueprint $table) {
             $table->id();
             $table->dateTime('date')->nullable(false);
             $table->unsignedBigInteger('id_clients')->nullable(false);
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->index('id_num_commande');
 
             $table->foreign('id_clients')->references('id')->on('clients');
-            $table->foreign('id_num_commande')->references('id')->on('commande_entete');
+            $table->foreign('id_num_commande')->references('id')->on('commandes_entetes');
             
             
 
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('commande_entete');
+        Schema::dropIfExists('commandes_entetes');
     }
 };

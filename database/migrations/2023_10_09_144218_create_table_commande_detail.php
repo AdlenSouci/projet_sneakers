@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('commande_detail', function (Blueprint $table) {
+        Schema::create('commandes_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_num_commande')->nullable(false);
             $table->unsignedBigInteger('id_article')->nullable(false);
@@ -27,8 +27,8 @@ return new class extends Migration
 
 
             //$table->foreign('id_clients')->references('id')->on('clients');
-            $table->foreign('id_article')->references('id')->on('article');
-            $table->foreign('id_num_commande')->references('id')->on('commande_entete');
+            $table->foreign('id_article')->references('id')->on('articles');
+            $table->foreign('id_num_commande')->references('id')->on('commandes_entetes');
         });
     }
 
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('commande_detail');
+        Schema::dropIfExists('commandes_details');
     }
 };

@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('famille', function (Blueprint $table) {
+        Schema::create('familles', function (Blueprint $table) {
             $table->id();
             $table->string('nom',70)->nullable(false);
-            $table->unsignedBigInteger('id_parent');
+            $table->unsignedBigInteger('id_parent')->nullable(true);
             $table->timestamps();
 
             $table->index('nom');
             $table->index('id_parent');
             $table->index('id_parent','nom')->unique();
-            $table->foreign('id_parent')->references('id')->on('famille');
+            $table->foreign('id_parent')->references('id')->on('familles');
 
         });
         
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('famille');
+        Schema::dropIfExists('familles');
     }
 };
