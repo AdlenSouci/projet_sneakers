@@ -12,8 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(100)->create();
-        // \App\Models\Article::factory(100)->create();
+        \App\Models\Clients::factory(100)->create();
 
         $this->call([MarquesSeeder::class]);
         $this->call([FamillesSeeder::class]);

@@ -14,7 +14,10 @@ class PaysSeeder extends Seeder
     public function run(): void
     {
         $countries = array(
-			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan')
+			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
+			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
+			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
+			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
         );
         DB::table('pays')->insert($countries);   
     }
