@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tvas', function (Blueprint $table) {
-            $table->id();
-
-           
-            $table->timestamps();
-
-            $table->index('taux_tva');
+        Schema::table('pays', function (Blueprint $table) {
+            $table->decimal('taux_tva', 5, 2)->after('nom_gb')->default(0)->nullable(false);
         });
     }
 
@@ -26,7 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tvas');
+        //
     }
 };
-    

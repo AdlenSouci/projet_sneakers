@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('familles', function (Blueprint $table) {
             $table->id();
-            $table->string('nom',70)->nullable(false);
+            $table->string('nom',70)->nullable(false)->unique();
             $table->unsignedBigInteger('id_parent')->nullable(true);
             $table->timestamps();
 
