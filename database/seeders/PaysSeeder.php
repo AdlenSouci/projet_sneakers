@@ -14,11 +14,17 @@ class PaysSeeder extends Seeder
     public function run(): void
     {
         $countries = array(
-			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
-			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
-			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
-			array('id'=>1, 'numerique'=>4, 'alpha2'=>'AF', 'alpha3'=>'AFG', 'nom'=>'Afghanistan', 'nom_gb'=>'Afghanistan'),
+            array('id' => 1, 'numerique' => 12, 'alpha2' => 'DZ', 'alpha3' => 'DZA', 'nom' => 'Algeria', 'nom_gb' => 'Algeria', 'tva' => 19.00),
+            array('id' => 2, 'numerique' => 250, 'alpha2' => 'FR', 'alpha3' => 'FRA', 'nom' => 'France', 'nom_gb' => 'France', 'tva' => 20.00),
+            array('id' => 3, 'numerique' => 724, 'alpha2' => 'ES', 'alpha3' => 'ESP', 'nom' => 'Spain', 'nom_gb' => 'Spain', 'tva' => 21.00),
+            array('id' => 4, 'numerique' => 620, 'alpha2' => 'PT', 'alpha3' => 'PRT', 'nom' => 'Portugal', 'nom_gb' => 'Portugal', 'tva' => 23.00),
+            array('id' => 5, 'numerique' => 380, 'alpha2' => 'IT', 'alpha3' => 'ITA', 'nom' => 'Italy', 'nom_gb' => 'Italy', 'tva' => 22.00),
+            array('id' => 6, 'numerique' => 826, 'alpha2' => 'GB', 'alpha3' => 'GBR', 'nom' => 'United Kingdom', 'nom_gb' => 'United Kingdom', 'tva' => 20.00),
+            array('id' => 7, 'numerique' => 56, 'alpha2' => 'BE', 'alpha3' => 'BEL', 'nom' => 'Belgium', 'nom_gb' => 'Belgium', 'tva' => 21.00),
+            array('id' => 8, 'numerique' => 528, 'alpha2' => 'MQ', 'alpha3' => 'MTQ', 'nom' => 'Martinique', 'nom_gb' => 'Martinique', 'tva' => 20.00)
+            // Ajoutez d'autres pays européens ici
+
         );
-        DB::table('pays')->insert($countries);   
+        DB::table('pays')->insert($countries);
     }
 }

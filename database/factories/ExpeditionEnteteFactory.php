@@ -17,11 +17,11 @@ class ExpeditionEnteteFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->words(5, true),
-            'body' => $this->faker->sentence(45),
-            'likes' => $this->faker->randomNumber(5),
-            'author' => $this->faker->name(),
-            'draft' => $this->faker->boolean()
+            'id_num_bon_livraison' => $this->faker->unique()->randomNumber(5), // Utilise la méthode unique() pour garantir l'unicité du numéro de bon de livraison
+            'id_clients' => $this->faker->numberBetween(1, 100), // Utilise la méthode numberBetween() pour générer un nombre entre 1 et 100 (ajustez la plage selon vos besoins)
+            'date' => $this->faker->date(), // Utilise la méthode date() pour générer une date aléatoire
+
+
         ];
     }
 }

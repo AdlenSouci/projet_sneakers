@@ -28,10 +28,10 @@ class ClientFactory extends Factory
             'cp2' => $this->faker->postcode(),
             'ville2' => $this->faker->city(),
             'pays2' => $this->faker->country(),
-            'sexe' => $this->faker->(),
-            'telephone' => $this->faker->enum(),
-            'email' => $this->faker->enum(),
-            'mot_de_passe' => $this->faker->enum(),
+            'sexe' => $this->faker->randomElement(['homme', 'femme', 'autre']),
+            'telephone' => $this->faker->phoneNumber(),
+            'email' => $this->faker->email(),
+            'mot_de_passe' => $this->faker->password(),
         
             
         ];
