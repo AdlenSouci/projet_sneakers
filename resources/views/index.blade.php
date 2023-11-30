@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 
-
-
-    <title>My sneakers</title>
+  <title>My sneakers</title>
 
 </head>
 
@@ -26,12 +24,15 @@
             </div>
             <ul class="nav navbar-nav">
 
-                
-                <li class="active" style="color: purple;"><a href="/">Home</a></li>
+
+                <li class="active" style="color: purple;"><a href="/index">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="/">Contact</a></li>
+                <li><a href="/connection"> Connection</a></li>
+                <li><a href="/register"> Register</a></li>
+
+
             </ul>
         </div>
     </nav>
@@ -84,7 +85,11 @@
     </div>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+  
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+
 
 
 </body>

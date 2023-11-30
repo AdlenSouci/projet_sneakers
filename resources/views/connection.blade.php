@@ -25,7 +25,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active" style="color: purple;"><a href="/contact">Contact</a></li>
-                
+
                 <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
                 <li><a href="/about">About Us</a></li>
@@ -35,36 +35,18 @@
         </div>
     </nav>
 
-    <div class="formulaire-contact">
-        <h2>Formulaire de contact</h2>
-
-        <form action="index.php" method="post">
-            <div class="champ">
-                <label for="nom">Name</label>
-                <input type="text" id="nom" name="nom">
+    <div class="container">
+        <h2>Login Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
             </div>
-
-            <div class="champ">
-                <label for="prenom">Surname</label>
-                <input type="text" id="prenom" name="prenom">
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
             </div>
-
-            <div class="champ">
-                <label for="email">e-mail</label>
-                <input type="email" id="email" name="email">
-            </div>
-
-            <div class="champ">
-                <label for="objet">Object</label>
-                <input type="text" id="objet" name="objet">
-            </div>
-
-            <div class="champ">
-                <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea>
-            </div>
-
-            <input type="submit" value="Envoyer" class="btn rounded-pill">
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
 

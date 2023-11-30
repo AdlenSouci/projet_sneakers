@@ -28,3 +28,11 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/connection', function () {
+    return view('connection');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});

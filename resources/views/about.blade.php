@@ -25,6 +25,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active" style="color: purple;"><a href="/about">About us</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
