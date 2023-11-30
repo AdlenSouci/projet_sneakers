@@ -11,7 +11,7 @@
 
 
 
-    <title>Contact</title>
+    <title>Connection</title>
 
 </head>
 
@@ -24,7 +24,7 @@
                 <a class="navbar-brand" href="#">My Sneakers</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active" style="color: purple;"><a href="/contact">Contact</a></li>
+                <li class="active" style="color: purple;"><a href="/connection">Connection</a></li>
 
                 <li><a href="/">Home</a></li>
                 <li><a href="/shop">Shop</a></li>
@@ -35,18 +35,21 @@
         </div>
     </nav>
 
-    <div class="container">
-        <h2>Login Form</h2>
-        <form>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter username">
+    <div class="formulaire-contact">
+        <h2>connection</h2>
+
+        <form action="index.php" method="post">
+            <div class="champ">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Email">
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password">
+
+            <div class="champ">
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" placeholder="Mot de passe">
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+
+            <input type="submit" value="Envoyer" class="btn rounded-pill">
         </form>
     </div>
 
