@@ -3,11 +3,13 @@
 
 <head>
 
+
     <meta charset="UTF-8">
-    <meta http equiv="X-UA-Compatible" content="IE=edge" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
 
@@ -18,17 +20,19 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-default custom-navbar ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">My Sneakers</a>
+            <a class="navbar-brand" href="#">About us</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active" style="color: purple;"><a href="/about">About us</a></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
         </div>
     </nav>
 
@@ -57,10 +61,10 @@
 
     </div>
 
-   
+
     <script src="js/bootstrap.bundle.min.js"></script>
-    
-    
+
+
 </body>
 
 </html>

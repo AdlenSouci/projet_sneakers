@@ -1,23 +1,35 @@
-/* Ajoutez ce style dans votre fichier CSS */
-.navbar.custom-navbar {
+.bg-custom {
     background-color: #F8EEB7;
     /* Couleur de fond de la barre de navigation */
-    border-color: #000000;
-    /* Couleur de la bordure de la barre de navigation, si vous le souhaitez */
-    color: white;
+}
+
+.navbar-brand {
+    color: purple;
     /* Couleur du texte dans la barre de navigation */
 }
 
-.custom-navbar .navbar-nav li.active a {
-    color: purple;
+.card-3d {
+    float: left;
+    width: 70%;
+    max-height: 50vh;
+    margin-top: 20px;
+    margin-right: 20px;
+    /* Adjust the margin values according to your preferences */
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    background-color: antiquewhite;
 }
 
-#carouselExampleControls {
-    width: 50%;
-    margin: auto;
+.card-3d:hover {
+    transform: perspective(1000px) rotateY(10deg);
 }
 
-.carousel-item img {
-    width: 100%;
-    height: auto;
+.main-text {
+    margin-left: 10px;
 }
+
+.col-md-8 {
+    position: relative;
+    left: 0;
+}
+

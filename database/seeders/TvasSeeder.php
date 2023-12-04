@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TvasSeeder extends Seeder
 {
@@ -13,7 +14,19 @@ class TvasSeeder extends Seeder
     public function run(): void
     {
         DB::table('tvas')->insert([
-            'taux_tva'  => '',
+            'taux_tva'  => '20'
+            
+        ]);
+        DB::table('tvas')->insert([
+            'taux_tva'  => '19'
+            
+        ]);
+        DB::table('tvas')->insert([
+            'taux_tva'  => '22'
+            
+        ]);
+        DB::table('tvas')->insert([
+            'taux_tva'  => '21'
             
         ]);
     }

@@ -1,44 +1,35 @@
-/* Ajoutez ce style dans votre fichier CSS */
-.navbar.custom-navbar {
+.bg-custom {
   background-color: #F8EEB7;
   /* Couleur de fond de la barre de navigation */
-  border-color: #000000;
-  /* Couleur de la bordure de la barre de navigation, si vous le souhaitez */
-  color: white;
+}
+
+.navbar-brand {
+  color: purple;
   /* Couleur du texte dans la barre de navigation */
 }
 
-.custom-navbar .navbar-nav li.active a {
-  color: purple;
+.container {
+  max-width: 400px;
 }
 
-
-.formulaire-contact {
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
+.form-container {
+  border: 2px solid rgb(88, 12, 101);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff; /* Couleur de fond */
 }
 
-.champ {
-  margin-bottom: 10px;
-}
-
-label {
+.form-label {
   font-weight: bold;
+  color: rgb(88, 12, 101);
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: .9rem; /* arrondit les coins des champs de formulaire */
+.form-control {
+  border-radius: 10px;
 }
 
-input[type="submit"] {
-  background-color: purple;
-  color: #fff;
-  padding: 10px 20px;
+.btn-primary {
+  background-color: rgb(88, 12, 101);
   border: none;
-  cursor: pointer;
-  border-radius: .9rem; /* arrondit les coins du bouton d'envoi */
+  border-radius: 10px;
 }

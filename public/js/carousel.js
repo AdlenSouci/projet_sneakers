@@ -1,4 +1,3 @@
-// Initialization for ES Users
-import { Carousel, initMDB } from "mdb-ui-kit";
-
-initMDB({ Carousel });
+$('input').on('change', function () {
+    $('body').toggleClass('blue');
+});

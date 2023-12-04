@@ -1,19 +1,34 @@
-/* Ajoutez ce style dans votre fichier CSS */
-.navbar.custom-navbar {
+.bg-custom {
     background-color: #F8EEB7;
     /* Couleur de fond de la barre de navigation */
-    border-color: #000000;
-    /* Couleur de la bordure de la barre de navigation, si vous le souhaitez */
-    color: white;
+}
+
+.navbar-brand {
+    color: purple;
     /* Couleur du texte dans la barre de navigation */
 }
-
-.custom-navbar .navbar-nav li.active a {
-    color: purple;
+.container {
+    max-width: 400px;
 }
 
+.form-container {
+    border: 2px solid rgb(88, 12, 101);
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff; /* Couleur de fond */
+}
 
+.form-label {
+    font-weight: bold;
+    color:  rgb(88, 12, 101);
+}
 
+.form-control {
+    border-radius: 10px;
+}
 
-/* Ajoutez ce style dans votre fichier CSS */
-
+.btn-primary {
+    background-color: rgb(88, 12, 101);
+    border: none;
+    border-radius: 10px;
+}
